@@ -652,7 +652,7 @@
           repo: 'codesong.github.io',
           owner: 'codesong',
           admin: ['codesong'],
-		  id: (location.pathname).split("/").pop().substring(0, 49),
+		  location.pathname,
           distractionFreeMode: 'true'
         })
         gitalk.render('gitalk-container')           

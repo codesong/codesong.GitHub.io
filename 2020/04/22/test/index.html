@@ -650,14 +650,15 @@
   <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
   <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
   <script src="/js/src/md5.min.js"></script>
+  
   <script type="text/javascript">
-        var gitalk = new Gitalk({
-          clientID: 'b432db1c8b3c75b97c67',
+	var gitalk = new Gitalk({
+		clientID: 'b432db1c8b3c75b97c67',
           clientSecret: '625ba21fed4a7e78e176cc389f1679a78e425d6c',
           repo: 'codesong.github.io',
           owner: 'codesong',
           admin: ['codesong'],
-		  id: md5(location.pathname),
+		  id: (location.pathname).split("/").pop().substring(0, 49),
           distractionFreeMode: 'true'
         })
         gitalk.render('gitalk-container')           

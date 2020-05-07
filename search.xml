@@ -1,25 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>使用MySQL开发程序</title>
-    <url>/2020/04/21/%E4%BD%BF%E7%94%A8MySQL%E5%BC%80%E5%8F%91%E7%A8%8B%E5%BA%8F/</url>
-    <content><![CDATA[<p>Application programs should use this general outline for interacting with MySQL:</p>
-<ol>
-<li><p>Initialize the MySQL client library by calling mysql_library_init().</p>
-</li>
-<li><p>Initialize a connection handler by calling mysql_init() and connect to the server by calling<br>mysql_real_connect().</p>
-</li>
-<li><p>Issue SQL statements and process their results. (The following discussion provides more<br>information about how to do this.)</p>
-</li>
-<li><p>Close the connection to the MySQL server by calling mysql_close().</p>
-</li>
-<li><p>End use of the MySQL client library by calling mysql_library_end().</p>
-</li>
-</ol>
-<p>MySQL 8.0 provides support for server-side prepared statements. This support takes advantage of<br>the efficient client/server binary protocol. Using prepared statements with placeholders for parameter<br>values has the following benefits:<br>• Less overhead for parsing the statement each time it is executed. Typically, database applications<br>process large volumes of almost-identical statements, with only changes to literal or variable values<br>in clauses such as WHERE for queries and deletes, SET for updates, and VALUES for inserts.<br>• Protection against SQL injection attacks. The parameter values can contain unescaped SQL quote<br>and delimiter characters.</p>
-]]></content>
-  </entry>
-  <entry>
     <title>C++中使用Lambda表达式</title>
     <url>/2020/04/20/C-%E4%B8%AD%E4%BD%BF%E7%94%A8Lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F/</url>
     <content><![CDATA[<p>C++11开始支持Lambda表达式。Lambda是能够捕获范围内变量的匿名函数对象。</p>
@@ -43,6 +24,25 @@
 <li>推荐使用场景：封装的代码简单，不需要复用，且不想花精力去思考如何命名函数。除了此场景外，使用普通的函数更好。</li>
 <li>推荐使用方式：<code>[ captures ] ( params ) { body }</code>。</li>
 </ol>
+]]></content>
+  </entry>
+  <entry>
+    <title>使用MySQL开发程序</title>
+    <url>/2020/04/21/%E4%BD%BF%E7%94%A8MySQL%E5%BC%80%E5%8F%91%E7%A8%8B%E5%BA%8F/</url>
+    <content><![CDATA[<p>Application programs should use this general outline for interacting with MySQL:</p>
+<ol>
+<li><p>Initialize the MySQL client library by calling mysql_library_init().</p>
+</li>
+<li><p>Initialize a connection handler by calling mysql_init() and connect to the server by calling<br>mysql_real_connect().</p>
+</li>
+<li><p>Issue SQL statements and process their results. (The following discussion provides more<br>information about how to do this.)</p>
+</li>
+<li><p>Close the connection to the MySQL server by calling mysql_close().</p>
+</li>
+<li><p>End use of the MySQL client library by calling mysql_library_end().</p>
+</li>
+</ol>
+<p>MySQL 8.0 provides support for server-side prepared statements. This support takes advantage of<br>the efficient client/server binary protocol. Using prepared statements with placeholders for parameter<br>values has the following benefits:<br>• Less overhead for parsing the statement each time it is executed. Typically, database applications<br>process large volumes of almost-identical statements, with only changes to literal or variable values<br>in clauses such as WHERE for queries and deletes, SET for updates, and VALUES for inserts.<br>• Protection against SQL injection attacks. The parameter values can contain unescaped SQL quote<br>and delimiter characters.</p>
 ]]></content>
   </entry>
 </search>
